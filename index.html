@@ -18,64 +18,48 @@
   </head>
   <body>
     <!-- Navbar -->
-      <section>
-        <section><nav class="navbar" role="navigation" aria-label="main navigation">
+    <section>
+      <nav class="navbar is-transparent py-3">
+        <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-              <img src="assets/images/Color logo - no background.png" width="112" height="28">
+            <a class="navbar-item" href="#">
+              <img src="assets/images/Color logo - no background.png" alt="" width="auto" style="min-height: 100px;">
             </a>
-        
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a class="navbar-burger" role="button" type="button" data-toggle="side-menu" data-target="#sideMenu05" aria-controls="sideMenu05" aria-expanded="false" aria-label="Toggle navigation">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
           </div>
-        
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item">
-                Home
-              </a>
-        
-              <a class="navbar-item">
-                Documentation
-              </a>
-        
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    About
-                  </a>
-                  <a class="navbar-item">
-                    Jobs
-                  </a>
-                  <a class="navbar-item">
-                    Contact
-                  </a>
-                  <hr class="navbar-divider">
-                  <a class="navbar-item">
-                    Report an issue
-                  </a>
-                </div>
-              </div>
-            </div>
-        
-            <div class="navbar-end">
+          <div class="navbar-menu">
+            <div class="navbar-end ml-auto mr-0"><a class="navbar-item" href="#">Product</a><a class="navbar-item" href="#">Company</a><a class="navbar-item" href="#">About Us</a><a class="navbar-item" href="#">Features</a></div>
+            <div class="navbar-end ml-0">
               <div class="navbar-item">
-                <div class="buttons">
-                  <a class="button is-primary">
-                    <strong>Sign up</strong>
-                  </a>
-                  <a class="button is-light">
-                    Log in
-                  </a>
-                </div>
               </div>
             </div>
           </div>
+        </div>
+      </nav>
+      <div class="is-hidden navbar-side is-fixed" style="top: 0; left: 0; bottom: 0; width: 80%; height: 100%; z-index: 9999;" id="sideMenu05">
+        <div class="navbar-backdrop is-fixed is-top is-right is-fullsize has-background-grey" style="opacity: 75%; z-index: 50;"></div>
+        <nav class="navbar is-relative is-flex is-flex-direction-column pt-4 px-4" style="width: 100%; height: 100%; z-index: 50; overflow-y: auto;">
+          <div class="mb-5 navbar-brand is-flex is-justify-content-space-between">
+            <a class="navbar-item" href="#">
+              <img style="min-height: 35px;" src="assets/images/Color logo - no background.png" alt="" width="auto">
+            </a>
+            <a class="navbar-item">
+              <svg class="image is-24x24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </a>
+          </div>
+          <div>
+            <nav class="navbar mb-5">
+              <div class="is-fullwidth"><a class="navbar-item" href="#">Product</a><a class="navbar-item" href="#">Company</a><a class="navbar-item" href="#">About Us</a><a class="navbar-item" href="#">Features</a></div>
+            </nav>
         </nav>
-
-      </section>
+      </div>
+    </section>
       <!-- end of navbar -->
 
       <!-- start of background pic and columns -->
@@ -85,11 +69,6 @@
               <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                   </a>
-                <a class="navbar-burger" role="button" type="button" data-toggle="side-menu" data-target="#sideMenuHeaders09" aria-controls="sideMenuHeaders09" aria-expanded="false" aria-label="Toggle navigation">
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
               </div>
               <div class="navbar-menu">
                 <div class="navbar-start is-centered-absolute"></div>
@@ -173,7 +152,7 @@
         <footer class="footer">
           <!-- Copyright symbol of company -->
         <div class="content has-text-centered">
-          <p>Copyright © Stay Trip'n</p>
+          <p>Copyright © Stay Trip'n 2022</p>
     
         </div>
     
@@ -186,13 +165,14 @@
         <h4 class="bd-footer-title 
                    has-text-weight-medium
                    has-text-left">
-          Stay Trip'n
+                   <figure class="image is-178x178">
+                    <img src="assets/images/Color logo - no background.png">
+                  </figure>
         </h4>
     
         <!-- footer content -->
         <p class="bd-footer-link 
                   has-text-left">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quas dolore reprehenderit maiores dolores aspernatur necessitatibus consequuntur vel voluptas repellat?F
         </p>
     
       </div>
