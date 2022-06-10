@@ -1,4 +1,4 @@
-# STAY TRIPIN'
+# STAY TRIPN'
 ### Group Project 1
 
 ## Project Description
@@ -22,7 +22,7 @@ THEN I am again presented with current and future conditions for that city
 ```
 
 ## Deployed Website
-(deployed site URL) <br />
+https://mherring11.github.io/stay-tripn <br />
 ![Deployed website](#)
 
 ## Built With
@@ -34,15 +34,17 @@ THEN I am again presented with current and future conditions for that city
 * Travel Places API (need URL)
 * Accuweather API (need URL)
 
+## Future Development
+
 
 ## Authors
 **Michael Herring**
 - [GitHub Profile](https://github.com/mherring11)
-- [LinkedIn](enter URL here, if you like)
+- [LinkedIn](https://www.linkedin.com/in/michael-herring-aa602024/)
 
 **David Barnes**
 - [GitHub Profile](https://github.com/rohirrimsride)
-- [LinkedIn](enter URL here, if you like)
+- [LinkedIn](https://www.linkedin.com/in/dave-barnes-b017b945/)
 
 **Samantha Guerra**
 - [GitHub Profile](https://github.com/Sam-Antics)
