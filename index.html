@@ -94,6 +94,24 @@
         </div>
           </nav></div>
       </section>
+
+      <!-- Search form, button, and Search History -->
+      <section class="section">
+        <div class="container">
+          <!-- Search Form (leaving div, form, and btn open for Bulma classes to be added)-->
+          <div id="destination-search">
+            <form id="search-form">
+              <label for="search">Where to?</label>
+              <div id="input-area">
+                <input id="searched-location" type="text" placeholder="Anytown, USA">
+                <button id="search-btn" class="button" type="submit">Take Off!</button>
+              </div>
+            </form>
+        <!-- List of Past Searches -->
+        <ul id="past-search"></ul>
+          </div>
+        </div>
+      </section>
         
       <section class="section">
         <div class="container">
@@ -226,5 +244,6 @@
   <!-- end of footer -->
       </section>
     </div>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
