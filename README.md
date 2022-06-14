@@ -1,40 +1,47 @@
 # STAY TRIPN'
 ### Group Project 1
 
+## Table of Contents
+1. [Project Description](#project-description)
+2. [Deployed Website](#deployed-website)
+3. [Built With](#built-with)
+4. [Future Development](#future-development)
+5. [Authors](#authors)
+
 ## Project Description
 Build an application to give travelers a way to find out what's going on at their destination during the dates when they'll be there.
 ### User Story
 ```
 AS A traveler
-I WANT to see the COVID stats, points of interest, and weather forcast for my destination
+I WANT to see the COVID stats, points of interest, and weather information for my destination
 SO THAT I can plan a trip accordingly.
 ```
 ### Acceptance Criteria
 ```
-GIVEN a dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current COVID stats and points of interest for that city and that city is added to the search history
- 
- ... (more acceptance criteria to follow)
-
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+GIVEN a dashboard with dropdown selections
+WHEN I search for a country
+THEN I am presented with a list of regions.
+WHEN I choose a region
+THEN I am presented with current COVID-19 data for that region
+WHEN I enter a city in the 'City Search' form
+THEN I am presented with points of interest and weather information for that ciy
 ```
 
 ## Deployed Website
-https://mherring11.github.io/stay-tripn <br />
-![Deployed website](#)
+Deployed URL: https://mherring11.github.io/stay-tripn <br />
+![Deployed website](./assets/Deployed%20Wireframe.png)
 
 ## Built With
 * HTML
 * CSS
-* Bulma CSS Framework
 * JavaScript
-* COVID-19 Global Tracker API (need URL)
-* Travel Places API (need URL)
-* Accuweather API (need URL)
+* [Bulma CSS Framework](https://bulma.io/)
+* [COVID-19 Global Tracker API](https://rapidapi.com/popofibo/api/covid-19-global-tracker-with-regional-data/details)
+* [OpenTripMap](https://opentripmap.io/product)
+* [Accuweather API](https://rapidapi.com/stefan.skliarov/api/AccuWeather/details)
 
 ## Future Development
+We would like to add a way to get a targeted weather forecast for a date range when the user is planning on traveling to the location.
 
 
 ## Authors
