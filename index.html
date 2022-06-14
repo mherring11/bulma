@@ -103,6 +103,264 @@
             <form id="search-form">
               <label for="search">Where to?</label>
               <div id="input-area">
+                <div id="countryRegionSelect">
+                  <!-- country select list courtesy of - https://www.html-code-generator.com/html/drop-down/country-names -->
+                  <select id="country" name="country">
+                    <option>select country</option>
+                    <option class="dropDown" value="AF">Afghanistan</option>
+                    <option class="dropDown" value="AX">Aland Islands</option>
+                    <option class="dropDown" value="AL">Albania</option>
+                    <option class="dropDown" value="DZ">Algeria</option>
+                    <option class="dropDown" value="AS">American Samoa</option>
+                    <option class="dropDown" value="AD">Andorra</option>
+                    <option class="dropDown" value="AO">Angola</option>
+                    <option class="dropDown" value="AI">Anguilla</option>
+                    <option class="dropDown" value="AQ">Antarctica</option>
+                    <option class="dropDown" value="AG">Antigua and Barbuda</option>
+                    <option class="dropDown" value="AR">Argentina</option>
+                    <option class="dropDown" value="AM">Armenia</option>
+                    <option class="dropDown" value="AW">Aruba</option>
+                    <option class="dropDown" value="AU">Australia</option>
+                    <option class="dropDown" value="AT">Austria</option>
+                    <option class="dropDown" value="AZ">Azerbaijan</option>
+                    <option class="dropDown" value="BS">Bahamas</option>
+                    <option class="dropDown" value="BH">Bahrain</option>
+                    <option class="dropDown" value="BD">Bangladesh</option>
+                    <option class="dropDown" value="BB">Barbados</option>
+                    <option class="dropDown" value="BY">Belarus</option>
+                    <option class="dropDown" value="BE">Belgium</option>
+                    <option class="dropDown" value="BZ">Belize</option>
+                    <option class="dropDown" value="BJ">Benin</option>
+                    <option class="dropDown" value="BM">Bermuda</option>
+                    <option class="dropDown" value="BT">Bhutan</option>
+                    <option class="dropDown" value="BO">Bolivia</option>
+                    <option class="dropDown" value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                    <option class="dropDown" value="BA">Bosnia and Herzegovina</option>
+                    <option class="dropDown" value="BW">Botswana</option>
+                    <option class="dropDown" value="BV">Bouvet Island</option>
+                    <option class="dropDown" value="BR">Brazil</option>
+                    <option class="dropDown" value="IO">British Indian Ocean Territory</option>
+                    <option class="dropDown" value="BN">Brunei Darussalam</option>
+                    <option class="dropDown" value="BG">Bulgaria</option>
+                    <option class="dropDown" value="BF">Burkina Faso</option>
+                    <option class="dropDown" value="BI">Burundi</option>
+                    <option class="dropDown" value="KH">Cambodia</option>
+                    <option class="dropDown" value="CM">Cameroon</option>
+                    <option class="dropDown" value="CA">Canada</option>
+                    <option class="dropDown" value="CV">Cape Verde</option>
+                    <option class="dropDown" value="KY">Cayman Islands</option>
+                    <option class="dropDown" value="CF">Central African Republic</option>
+                    <option class="dropDown" value="TD">Chad</option>
+                    <option class="dropDown" value="CL">Chile</option>
+                    <option class="dropDown" value="CN">China</option>
+                    <option class="dropDown" value="CX">Christmas Island</option>
+                    <option class="dropDown" value="CC">Cocos (Keeling) Islands</option>
+                    <option class="dropDown" value="CO">Colombia</option>
+                    <option class="dropDown" value="KM">Comoros</option>
+                    <option class="dropDown" value="CG">Congo</option>
+                    <option class="dropDown" value="CD">Congo, Democratic Republic of the Congo</option>
+                    <option class="dropDown" value="CK">Cook Islands</option>
+                    <option class="dropDown" value="CR">Costa Rica</option>
+                    <option class="dropDown" value="CI">Cote D'Ivoire</option>
+                    <option class="dropDown" value="HR">Croatia</option>
+                    <option class="dropDown" value="CU">Cuba</option>
+                    <option class="dropDown" value="CW">Curacao</option>
+                    <option class="dropDown" value="CY">Cyprus</option>
+                    <option class="dropDown" value="CZ">Czech Republic</option>
+                    <option class="dropDown" value="DK">Denmark</option>
+                    <option class="dropDown" value="DJ">Djibouti</option>
+                    <option class="dropDown" value="DM">Dominica</option>
+                    <option class="dropDown" value="DO">Dominican Republic</option>
+                    <option class="dropDown" value="EC">Ecuador</option>
+                    <option class="dropDown" value="EG">Egypt</option>
+                    <option class="dropDown" value="SV">El Salvador</option>
+                    <option class="dropDown" value="GQ">Equatorial Guinea</option>
+                    <option class="dropDown" value="ER">Eritrea</option>
+                    <option class="dropDown" value="EE">Estonia</option>
+                    <option class="dropDown" value="ET">Ethiopia</option>
+                    <option class="dropDown" value="FK">Falkland Islands (Malvinas)</option>
+                    <option class="dropDown" value="FO">Faroe Islands</option>
+                    <option class="dropDown" value="FJ">Fiji</option>
+                    <option class="dropDown" value="FI">Finland</option>
+                    <option class="dropDown" value="FR">France</option>
+                    <option class="dropDown" value="GF">French Guiana</option>
+                    <option class="dropDown" value="PF">French Polynesia</option>
+                    <option class="dropDown" value="TF">French Southern Territories</option>
+                    <option class="dropDown" value="GA">Gabon</option>
+                    <option class="dropDown" value="GM">Gambia</option>
+                    <option class="dropDown" value="GE">Georgia</option>
+                    <option class="dropDown" value="DE">Germany</option>
+                    <option class="dropDown" value="GH">Ghana</option>
+                    <option class="dropDown" value="GI">Gibraltar</option>
+                    <option class="dropDown" value="GR">Greece</option>
+                    <option class="dropDown" value="GL">Greenland</option>
+                    <option class="dropDown" value="GD">Grenada</option>
+                    <option class="dropDown" value="GP">Guadeloupe</option>
+                    <option class="dropDown" value="GU">Guam</option>
+                    <option class="dropDown" value="GT">Guatemala</option>
+                    <option class="dropDown" value="GG">Guernsey</option>
+                    <option class="dropDown" value="GN">Guinea</option>
+                    <option class="dropDown" value="GW">Guinea-Bissau</option>
+                    <option class="dropDown" value="GY">Guyana</option>
+                    <option class="dropDown" value="HT">Haiti</option>
+                    <option class="dropDown" value="HM">Heard Island and Mcdonald Islands</option>
+                    <option class="dropDown" value="VA">Holy See (Vatican City State)</option>
+                    <option class="dropDown" value="HN">Honduras</option>
+                    <option class="dropDown" value="HK">Hong Kong</option>
+                    <option class="dropDown" value="HU">Hungary</option>
+                    <option class="dropDown" value="IS">Iceland</option>
+                    <option class="dropDown" value="IN">India</option>
+                    <option class="dropDown" value="ID">Indonesia</option>
+                    <option class="dropDown" value="IR">Iran, Islamic Republic of</option>
+                    <option class="dropDown" value="IQ">Iraq</option>
+                    <option class="dropDown" value="IE">Ireland</option>
+                    <option class="dropDown" value="IM">Isle of Man</option>
+                    <option class="dropDown" value="IL">Israel</option>
+                    <option class="dropDown" value="IT">Italy</option>
+                    <option class="dropDown" value="JM">Jamaica</option>
+                    <option class="dropDown" value="JP">Japan</option>
+                    <option class="dropDown" value="JE">Jersey</option>
+                    <option class="dropDown" value="JO">Jordan</option>
+                    <option class="dropDown" value="KZ">Kazakhstan</option>
+                    <option class="dropDown" value="KE">Kenya</option>
+                    <option class="dropDown" value="KI">Kiribati</option>
+                    <option class="dropDown" value="KP">Korea, Democratic People's Republic of</option>
+                    <option class="dropDown" value="KR">Korea, Republic of</option>
+                    <option class="dropDown" value="XK">Kosovo</option>
+                    <option class="dropDown" value="KW">Kuwait</option>
+                    <option class="dropDown" value="KG">Kyrgyzstan</option>
+                    <option class="dropDown" value="LA">Lao People's Democratic Republic</option>
+                    <option class="dropDown" value="LV">Latvia</option>
+                    <option class="dropDown" value="LB">Lebanon</option>
+                    <option class="dropDown" value="LS">Lesotho</option>
+                    <option class="dropDown" value="LR">Liberia</option>
+                    <option class="dropDown" value="LY">Libyan Arab Jamahiriya</option>
+                    <option class="dropDown" value="LI">Liechtenstein</option>
+                    <option class="dropDown" value="LT">Lithuania</option>
+                    <option class="dropDown" value="LU">Luxembourg</option>
+                    <option class="dropDown" value="MO">Macao</option>
+                    <option class="dropDown" value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                    <option class="dropDown" value="MG">Madagascar</option>
+                    <option class="dropDown" value="MW">Malawi</option>
+                    <option class="dropDown" value="MY">Malaysia</option>
+                    <option class="dropDown" value="MV">Maldives</option>
+                    <option class="dropDown" value="ML">Mali</option>
+                    <option class="dropDown" value="MT">Malta</option>
+                    <option class="dropDown" value="MH">Marshall Islands</option>
+                    <option class="dropDown" value="MQ">Martinique</option>
+                    <option class="dropDown" value="MR">Mauritania</option>
+                    <option class="dropDown" value="MU">Mauritius</option>
+                    <option class="dropDown" value="YT">Mayotte</option>
+                    <option class="dropDown" value="MX">Mexico</option>
+                    <option class="dropDown" value="FM">Micronesia, Federated States of</option>
+                    <option class="dropDown" value="MD">Moldova, Republic of</option>
+                    <option class="dropDown" value="MC">Monaco</option>
+                    <option class="dropDown" value="MN">Mongolia</option>
+                    <option class="dropDown" value="ME">Montenegro</option>
+                    <option class="dropDown" value="MS">Montserrat</option>
+                    <option class="dropDown" value="MA">Morocco</option>
+                    <option class="dropDown" value="MZ">Mozambique</option>
+                    <option class="dropDown" value="MM">Myanmar</option>
+                    <option class="dropDown" value="NA">Namibia</option>
+                    <option class="dropDown" value="NR">Nauru</option>
+                    <option class="dropDown" value="NP">Nepal</option>
+                    <option class="dropDown" value="NL">Netherlands</option>
+                    <option class="dropDown" value="AN">Netherlands Antilles</option>
+                    <option class="dropDown" value="NC">New Caledonia</option>
+                    <option class="dropDown" value="NZ">New Zealand</option>
+                    <option class="dropDown" value="NI">Nicaragua</option>
+                    <option class="dropDown" value="NE">Niger</option>
+                    <option class="dropDown" value="NG">Nigeria</option>
+                    <option class="dropDown" value="NU">Niue</option>
+                    <option class="dropDown" value="NF">Norfolk Island</option>
+                    <option class="dropDown" value="MP">Northern Mariana Islands</option>
+                    <option class="dropDown" value="NO">Norway</option>
+                    <option class="dropDown" value="OM">Oman</option>
+                    <option class="dropDown" value="PK">Pakistan</option>
+                    <option class="dropDown" value="PW">Palau</option>
+                    <option class="dropDown" value="PS">Palestinian Territory, Occupied</option>
+                    <option class="dropDown" value="PA">Panama</option>
+                    <option class="dropDown" value="PG">Papua New Guinea</option>
+                    <option class="dropDown" value="PY">Paraguay</option>
+                    <option class="dropDown" value="PE">Peru</option>
+                    <option class="dropDown" value="PH">Philippines</option>
+                    <option class="dropDown" value="PN">Pitcairn</option>
+                    <option class="dropDown" value="PL">Poland</option>
+                    <option class="dropDown" value="PT">Portugal</option>
+                    <option class="dropDown" value="PR">Puerto Rico</option>
+                    <option class="dropDown" value="QA">Qatar</option>
+                    <option class="dropDown" value="RE">Reunion</option>
+                    <option class="dropDown" value="RO">Romania</option>
+                    <option class="dropDown" value="RU">Russian Federation</option>
+                    <option class="dropDown" value="RW">Rwanda</option>
+                    <option class="dropDown" value="BL">Saint Barthelemy</option>
+                    <option class="dropDown" value="SH">Saint Helena</option>
+                    <option class="dropDown" value="KN">Saint Kitts and Nevis</option>
+                    <option class="dropDown" value="LC">Saint Lucia</option>
+                    <option class="dropDown" value="MF">Saint Martin</option>
+                    <option class="dropDown" value="PM">Saint Pierre and Miquelon</option>
+                    <option class="dropDown" value="VC">Saint Vincent and the Grenadines</option>
+                    <option class="dropDown" value="WS">Samoa</option>
+                    <option class="dropDown" value="SM">San Marino</option>
+                    <option class="dropDown" value="ST">Sao Tome and Principe</option>
+                    <option class="dropDown" value="SA">Saudi Arabia</option>
+                    <option class="dropDown" value="SN">Senegal</option>
+                    <option class="dropDown" value="RS">Serbia</option>
+                    <option class="dropDown" value="CS">Serbia and Montenegro</option>
+                    <option class="dropDown" value="SC">Seychelles</option>
+                    <option class="dropDown" value="SL">Sierra Leone</option>
+                    <option class="dropDown" value="SG">Singapore</option>
+                    <option class="dropDown" value="SX">Sint Maarten</option>
+                    <option class="dropDown" value="SK">Slovakia</option>
+                    <option class="dropDown" value="SI">Slovenia</option>
+                    <option class="dropDown" value="SB">Solomon Islands</option>
+                    <option class="dropDown" value="SO">Somalia</option>
+                    <option class="dropDown" value="ZA">South Africa</option>
+                    <option class="dropDown" value="GS">South Georgia and the South Sandwich Islands</option>
+                    <option class="dropDown" value="SS">South Sudan</option>
+                    <option class="dropDown" value="ES">Spain</option>
+                    <option class="dropDown" value="LK">Sri Lanka</option>
+                    <option class="dropDown" value="SD">Sudan</option>
+                    <option class="dropDown" value="SR">Suriname</option>
+                    <option class="dropDown" value="SJ">Svalbard and Jan Mayen</option>
+                    <option class="dropDown" value="SZ">Swaziland</option>
+                    <option class="dropDown" value="SE">Sweden</option>
+                    <option class="dropDown" value="CH">Switzerland</option>
+                    <option class="dropDown" value="SY">Syrian Arab Republic</option>
+                    <option class="dropDown" value="TW">Taiwan, Province of China</option>
+                    <option class="dropDown" value="TJ">Tajikistan</option>
+                    <option class="dropDown" value="TZ">Tanzania, United Republic of</option>
+                    <option class="dropDown" value="TH">Thailand</option>
+                    <option class="dropDown" value="TL">Timor-Leste</option>
+                    <option class="dropDown" value="TG">Togo</option>
+                    <option class="dropDown" value="TK">Tokelau</option>
+                    <option class="dropDown" value="TO">Tonga</option>
+                    <option class="dropDown" value="TT">Trinidad and Tobago</option>
+                    <option class="dropDown" value="TN">Tunisia</option>
+                    <option class="dropDown" value="TR">Turkey</option>
+                    <option class="dropDown" value="TM">Turkmenistan</option>
+                    <option class="dropDown" value="TC">Turks and Caicos Islands</option>
+                    <option class="dropDown" value="TV">Tuvalu</option>
+                    <option class="dropDown" value="UG">Uganda</option>
+                    <option class="dropDown" value="UA">Ukraine</option>
+                    <option class="dropDown" value="AE">United Arab Emirates</option>
+                    <option class="dropDown" value="GB">United Kingdom</option>
+                    <option class="dropDown" value="US">United States</option>
+                    <option class="dropDown" value="UM">United States Minor Outlying Islands</option>
+                    <option class="dropDown" value="UY">Uruguay</option>
+                    <option class="dropDown" value="UZ">Uzbekistan</option>
+                    <option class="dropDown" value="VU">Vanuatu</option>
+                    <option class="dropDown" value="VE">Venezuela</option>
+                    <option class="dropDown" value="VN">Viet Nam</option>
+                    <option class="dropDown" value="VG">Virgin Islands, British</option>
+                    <option class="dropDown" value="VI">Virgin Islands, U.s.</option>
+                    <option class="dropDown" value="WF">Wallis and Futuna</option>
+                    <option class="dropDown" value="EH">Western Sahara</option>
+                    <option class="dropDown" value="YE">Yemen</option>
+                    <option class="dropDown" value="ZM">Zambia</option>
+                    <option class="dropDown" value="ZW">Zimbabwe</option>
+                  </select>
+                </div>
                 <input id="searched-location" type="text" placeholder="Anytown, USA">
                 <button id="search-btn" class="button" type="submit">Take Off!</button>
               </div>
