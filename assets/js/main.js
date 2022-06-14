@@ -6,6 +6,7 @@ let countryRegionSelect = document.querySelector("#countryRegionSelect");
 
 let searchInfo = [];
 
+// pulls country code from selected country
 let countrySelection = function(event){
     console.log(event.target)
     let codeFinder = document.querySelector(".dropDown");
@@ -17,6 +18,7 @@ let countrySelection = function(event){
     } 
 };
 
+// fetches covid API to get selected country regions
 let regionBuilder = function(code){
     
     let covidOptions = {
@@ -70,6 +72,28 @@ let saveInfo = function() {
 
 // search event listener
 formEl.addEventListener("submit", searchFormHandler);
-
-
+// event listener for country selector 
 countryRegionSelect.addEventListener("click", countrySelection);
+
+// Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+  // open/close
+  const toggler = document.querySelectorAll('[data-toggle="side-menu"]');
+
+  if (toggler.length) {
+      for (var i = 0; i < toggler.length; i++) {
+          const target = toggler[i].getAttribute('data-target');
+
+          if (target.length) {
+              toggler[i].addEventListener('click', function(event) {
+                  event.preventDefault();
+                  const menu = document.querySelector(target);
+      
+                  if (menu) {
+                      menu.classList.toggle('is-hidden');
+                  }
+              });
+          }
+      }
+  }
+});
