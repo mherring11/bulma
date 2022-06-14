@@ -1,6 +1,13 @@
 # STAY TRIPN'
 ### Group Project 1
 
+## Table of Contents
+1. [Project Description](#project-description)
+2. [Deployed Website](#deployed-website)
+3. [Built With](#built-with)
+4. [Future Development](#future-development)
+5. [Authors](#authors)
+
 ## Project Description
 Build an application to give travelers a way to find out what's going on at their destination during the dates when they'll be there.
 ### User Story
@@ -23,18 +30,19 @@ THEN I am again presented with current and future conditions for that city
 
 ## Deployed Website
 https://mherring11.github.io/stay-tripn <br />
-![Deployed website](#)
+![Deployed website](./assets/Deployed%20Wireframe.png)
 
 ## Built With
 * HTML
 * CSS
-* Bulma CSS Framework
 * JavaScript
-* COVID-19 Global Tracker API (need URL)
-* Travel Places API (need URL)
-* Accuweather API (need URL)
+* [Bulma CSS Framework](https://bulma.io/)
+* [COVID-19 Global Tracker API](https://rapidapi.com/popofibo/api/covid-19-global-tracker-with-regional-data/details)
+* [OpenTripMap](https://opentripmap.io/product)
+* [Accuweather API](https://rapidapi.com/stefan.skliarov/api/AccuWeather/details)
 
 ## Future Development
+We would like to add a way to get a targeted weather forecast for a date range when the user is planning on traveling to the location.
 
 
 ## Authors
