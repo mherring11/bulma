@@ -9,17 +9,17 @@ let searchInfo = [];
 // pulls country code from selected country
 let countrySelection = function(event){
     console.log(event.target)
-    let codeFinder = document.querySelector(".dropDown");
+    let codeFinder = document.querySelector(".country-drop");
     codeFinder.addEventListener("click", console.log(event.target.value));
         let countryCode = event.target.value
-    if (codeFinder !== undefined){
+    if (countryCode !== "select country" && countryCode !== "select region"){
 
-        regionBuilder(countryCode);
+        regionsFinder(countryCode);
     } 
 };
 
 // fetches covid API to get selected country regions
-let regionBuilder = function(code){
+let regionsFinder = function(code){
     
     let covidOptions = {
         method: 'GET',
@@ -31,11 +31,38 @@ let regionBuilder = function(code){
     };
     
     fetch('https://covid-19-global-tracker-with-regional-data.p.rapidapi.com/api/covid/regionalDataByCountry/' + code, covidOptions)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-        
-}
+            .then(function(response){
+                if (response.ok){
+                    response.json().then(function(data){
+                        console.log(data.data.length);
+                        regionsBuilder(data);
+                    })
+                }
+            })       
+};
+
+// creates new drop down menu with selected countries regions
+let regionsBuilder = function(data){
+    let regionSelect = document.createElement("select");
+    regionSelect.className = ("dest-select");
+    regionSelect.setAttribute("id", "region");
+    regionSelect.setAttribute("name", "region");
+    countryRegionSelect.appendChild(regionSelect);
+
+    let regionElHolder = document.createElement("option")
+    regionElHolder.textContent = ("select region");
+    regionSelect.appendChild(regionElHolder);
+    console.log(data);
+
+    for (var i=0; i<data.data.length; i++){
+        let regionEl = document.createElement("option");
+        regionEl.className = ("region-drop");
+        regionEl.setAttribute("value", data.data[i].regionName);
+        regionEl.textContent = data.data[i].regionName
+        regionSelect.appendChild(regionEl);
+        console.log(data.data[i].regionName);
+    }
+};
 
 let searchFormHandler = function(event) {
     event.preventDefault();
