@@ -100,7 +100,7 @@
             <form id="search-form">
               <label for="search">Where to?</label>
               <div id="input-area">
-                <div id="countryRegionSelect" class="column">
+                <div id="countrySelCont">
                   <!-- country select list courtesy of - https://www.html-code-generator.com/html/drop-down/country-names -->
                   <select class="dest-select" id="country" name="country">
                     <option >select country</option>
@@ -357,6 +357,9 @@
                     <option class="country-drop" value="ZM">Zambia</option>
                     <option class="country-drop" value="ZW">Zimbabwe</option>
                   </select>
+                </div>
+                <div id="regionSelCont">
+                  <!-- holds dynamic region select element -->
                 </div>
                 <input id="searched-location" type="text" placeholder="Anytown, USA">
                 <button id="search-btn" class="button" type="submit">Take Off!</button>

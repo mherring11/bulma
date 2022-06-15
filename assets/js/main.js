@@ -2,16 +2,19 @@
 let formEl = document.querySelector("#search-form");
 let pastSearch = document.querySelector("#past-search");
 let searchBtn = document.querySelector("#search-btn");
-let countryRegionSelect = document.querySelector("#countryRegionSelect");
+let countrySelCont = document.querySelector("#countrySelCont");
+let regionSelCont = document.querySelector("#regionSelCont");
 
 let searchInfo = [];
+let covidData = [];
+console.log(covidData);
 
 // pulls country code from selected country
 let countrySelection = function(event){
     console.log(event.target)
     let codeFinder = document.querySelector(".country-drop");
     codeFinder.addEventListener("click", console.log(event.target.value));
-        let countryCode = event.target.value
+        let countryCode = event.target.value;
     if (countryCode !== "select country" && countryCode !== "select region"){
 
         regionsFinder(countryCode);
@@ -34,7 +37,9 @@ let regionsFinder = function(code){
             .then(function(response){
                 if (response.ok){
                     response.json().then(function(data){
+                        console.log(data.data);
                         console.log(data.data.length);
+                        covidData.push(data);
                         regionsBuilder(data);
                     })
                 }
@@ -43,15 +48,16 @@ let regionsFinder = function(code){
 
 // creates new drop down menu with selected countries regions
 let regionsBuilder = function(data){
-    let regionSelect = document.createElement("select");
-    regionSelect.className = ("dest-select");
-    regionSelect.setAttribute("id", "region");
-    regionSelect.setAttribute("name", "region");
-    countryRegionSelect.appendChild(regionSelect);
+    let regionSelCont = document.querySelector("#regionSelCont")
+    let region = document.createElement("select");
+    region.className = ("dest-select");
+    region.setAttribute("id", "region");
+    region.setAttribute("name", "region");
+    regionSelCont.appendChild(region);
 
     let regionElHolder = document.createElement("option")
     regionElHolder.textContent = ("select region");
-    regionSelect.appendChild(regionElHolder);
+    region.appendChild(regionElHolder);
     console.log(data);
 
     for (var i=0; i<data.data.length; i++){
@@ -59,10 +65,27 @@ let regionsBuilder = function(data){
         regionEl.className = ("region-drop");
         regionEl.setAttribute("value", data.data[i].regionName);
         regionEl.textContent = data.data[i].regionName
-        regionSelect.appendChild(regionEl);
+        region.appendChild(regionEl);
         console.log(data.data[i].regionName);
     }
 };
+
+let covidDisplay = function(event){
+    // debugger;
+    console.log(event.target);
+    let regionFinder = document.querySelector(".region-drop");
+    regionFinder.addEventListener("click", console.log(event.target.value));
+    let regionChoice = event.target.value;
+    
+    if (regionChoice !== "select region") {
+        debugger;
+        for (var i=0; i<covidData[0].data.length; i++);{
+            if (regionChoice === covidData[0].data[i]){
+                console.log(regionChoice);
+            }
+        }
+    }           
+}
 
 let searchFormHandler = function(event) {
     event.preventDefault();
@@ -100,7 +123,9 @@ let saveInfo = function() {
 // search event listener
 formEl.addEventListener("submit", searchFormHandler);
 // event listener for country selector 
-countryRegionSelect.addEventListener("click", countrySelection);
+countrySelCont.addEventListener("click", countrySelection);
+// event listener for regional covid display function
+regionSelCont.addEventListener("click", covidDisplay);
 
 // Burger menus
 document.addEventListener('DOMContentLoaded', function() {
