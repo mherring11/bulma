@@ -39,6 +39,12 @@ let regionsFinder = function(code){
                     response.json().then(function(data){
                         console.log(data.data);
                         console.log(data.data.length);
+                        if (data.data.length === 0) {
+                            noCovidData(data);
+                        }
+                        else if (covidData.length !== 0) {
+                            covidData.splice(0, covidData.length);
+                        };
                         covidData.push(data);
                         regionsBuilder(data);
                     })
@@ -46,9 +52,16 @@ let regionsFinder = function(code){
             })       
 };
 
+let noCovidData = function(data){
+    
+}
+
 // creates new drop down menu with selected countries regions
 let regionsBuilder = function(data){
     let regionSelCont = document.querySelector("#regionSelCont")
+        if (regionSelCont.children.length >= 1) {
+            regionSelCont.removeChild(regionSelCont.lastElementChild);
+        };
     let region = document.createElement("select");
     region.className = ("dest-select");
     region.setAttribute("id", "region");
@@ -70,7 +83,7 @@ let regionsBuilder = function(data){
     }
 };
 
-let covidDisplay = function(event){
+let covidDisplay = function(event, data){
     // debugger;
     console.log(event.target);
     let regionFinder = document.querySelector(".region-drop");
@@ -78,12 +91,16 @@ let covidDisplay = function(event){
     let regionChoice = event.target.value;
     
     if (regionChoice !== "select region") {
-        debugger;
-        for (var i=0; i<covidData[0].data.length; i++);{
-            if (regionChoice === covidData[0].data[i]){
+        covidData[0].data.findIndex(function(element){
+            if(element.regionName === regionChoice){
+                console.log(element.regionName);
                 console.log(regionChoice);
+                return true;
             }
-        }
+            return false;
+        });
+
+        
     }           
 }
 
