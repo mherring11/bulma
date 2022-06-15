@@ -92,25 +92,7 @@
           </nav></div>
       </section>
 
-      <!-- Search form, button, and Search History -->
-      <section class="section">
-        <div class="container">
-          <!-- Search Form (leaving div, form, and btn open for Bulma classes to be added)-->
-          <div id="destination-search">
-            <form id="search-form">
-              <label for="search">Where to?</label>
-                 <!-- Search Input Form -->
-              <div id="input-area">
-                <input id="searched-location" type="text" placeholder="City Search">
-                <button id="search-btn" class="button" type="submit">Take Off!</button>
-              </div>
-            </form>
-        <!-- List of Past Searches -->
-        <ul id="past-search"></ul>
-          </div>
-        </div>
-      </section>
-        
+          
       <section class="section">
         <div class="container">
           <div class="columns is-centered is-vcentered">
@@ -121,7 +103,23 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
                   </svg>
                   <h3 class="title is-size-5 is-spaced mb-3">Start Your Search</h3>
-                  <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <!-- Search form, button, and Search History -->
+                  <div class="container">
+                    <!-- Search Form (leaving div, form, and btn open for Bulma classes to be added)-->
+                    <div id="destination-search">
+                      <form id="search-form">
+                        <label for="search">Where to?</label>
+                           <!-- Search Input Form -->
+                        <div id="input-area">
+                          <input id="searched-location" type="text" placeholder="City Search">
+                          <button id="search-btn" class="button" type="submit">Take Off!</button>
+                        </div>
+                      </form>
+                  <!-- List of Past Searches -->
+                  <ul id="past-search"></ul>
+                    </div>
+                  </div>
+                  <p class="subtitle">Search for COVID data by country and region. Search for points of interest by city.</p>
                 </div>
               </div>
               <div class="mb-5 box">
