@@ -4,6 +4,8 @@ let pastSearch = document.querySelector("#past-search");
 let searchBtn = document.querySelector("#search-btn");
 let countrySelCont = document.querySelector("#countrySelCont");
 let regionSelCont = document.querySelector("#regionSelCont");
+let covidElHolder = document.querySelector("#covidElHolder");
+
 
 let searchInfo = [];
 let covidData = [];
@@ -11,6 +13,14 @@ console.log(covidData);
 
 // pulls country code from selected country
 let countrySelection = function(event){
+    if (covidElHolder.children.length > 2){
+        covidElHolder.removeChild(covidElHolder.lastElementChild);
+    };
+
+    if (regionSelCont.children.length >= 1) {
+        regionSelCont.removeChild(regionSelCont.lastElementChild);    
+    };
+
     console.log(event.target)
     let codeFinder = document.querySelector(".country-drop");
     codeFinder.addEventListener("click", console.log(event.target.value));
@@ -40,28 +50,35 @@ let regionsFinder = function(code){
                         console.log(data.data);
                         console.log(data.data.length);
                         if (data.data.length === 0) {
-                            noCovidData(data);
-                        }
-                        else if (covidData.length !== 0) {
                             covidData.splice(0, covidData.length);
-                        };
-                        covidData.push(data);
-                        regionsBuilder(data);
+                            debugger;
+                            covidDisplay();
+                        } else {
+                            covidData.splice(0, covidData.length);
+                            covidData.push(data);
+                            regionsBuilder(data);
+                        }
                     })
                 }
-            })       
+            });      
 };
 
-let noCovidData = function(data){
-    
-}
+// let noCovidData = function(data){
+//     console.log(covidElHolder.children.length);
+//         if (covidElHolder.children.length > 2){
+//             covidElHolder.removeChild(covidElHolder.lastElementChild)
+//         }
+//     let noCovidStats = document.createElement("p");
+//     noCovidStats.textContent = "Unfortunately, there is no Covid information available for this location.";
+//     covidElHolder.appendChild(noCovidStats);
+// }
 
 // creates new drop down menu with selected countries regions
 let regionsBuilder = function(data){
-    let regionSelCont = document.querySelector("#regionSelCont")
-        if (regionSelCont.children.length >= 1) {
-            regionSelCont.removeChild(regionSelCont.lastElementChild);
-        };
+    
+        // if (regionSelCont.children.length >= 1) {
+        //     regionSelCont.removeChild(regionSelCont.lastElementChild);
+        // };
     let region = document.createElement("select");
     region.className = ("dest-select");
     region.setAttribute("id", "region");
@@ -83,8 +100,18 @@ let regionsBuilder = function(data){
     }
 };
 
-let covidDisplay = function(event, data){
-    // debugger;
+let covidDisplay = function(event){
+
+    // console.log(covidData[0]);
+    if (covidData.length === 0){
+        // covidElHolder.removeChild(covidElHolder.lastElementChild);
+        // regionSelCont.removeChild(regionSelCont.lastElementChild);
+
+        let noCovidStats = document.createElement("p");
+        noCovidStats.textContent = "Unfortunately, there is no Covid information available for this location.";
+        covidElHolder.appendChild(noCovidStats);
+    } 
+    
     console.log(event.target);
     let regionFinder = document.querySelector(".region-drop");
     regionFinder.addEventListener("click", console.log(event.target.value));
@@ -93,8 +120,17 @@ let covidDisplay = function(event, data){
     if (regionChoice !== "select region") {
         covidData[0].data.findIndex(function(element){
             if(element.regionName === regionChoice){
+                console.log(element);
                 console.log(element.regionName);
                 console.log(regionChoice);
+                let covidStats = document.createElement("p");
+                covidStats.setAttribute("style", "white-space: pre;");
+                covidStats.textContent = element.regionName + "\n\ Total Case Count to Date: " + element.casesCount;
+                covidElHolder.appendChild(covidStats);
+
+
+
+
                 return true;
             }
             return false;
@@ -102,7 +138,7 @@ let covidDisplay = function(event, data){
 
         
     }           
-}
+};
 
 
     // checking if there is a valid input
