@@ -31,8 +31,8 @@ THEN I am presented with points of interest and weather information for that ciy
 ```
 
 ## Deployed Website
-Deployed URL: https://mherring11.github.io/stay-tripn <br />
-![Deployed website](./assets/Deployed%20Wireframe.png)
+Deployed URL: https://mherring11.github.io/stay-tripn <br/><br/>
+![Deployed website](./assets/screenshot.png)
 
 ## Built With
 * HTML
@@ -41,8 +41,7 @@ Deployed URL: https://mherring11.github.io/stay-tripn <br />
 * [Bulma CSS Framework](https://bulma.io/)
 * [COVID-19 Global Tracker API](https://rapidapi.com/popofibo/api/covid-19-global-tracker-with-regional-data/details)
 * [OpenTripMap](https://opentripmap.io/product)
-* [Accuweather API](https://rapidapi.com/stefan.skliarov/api/AccuWeather/details)
-* https://www.html-code-generator.com/html/drop-down/country-names
+* [HTML Code Generator](https://www.html-code-generator.com/html/drop-down/country-names)
 
 ## Future Development
 * We would like to add a way to get a targeted weather forecast for a date range when the user is planning on traveling to the location.
