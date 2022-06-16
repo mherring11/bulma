@@ -9,7 +9,6 @@ var openTripEl = document.querySelector("#places-section");
 
 var searchInfo = [];
 var covidData = [];
-console.log(covidData);
 
 // pulls country code from selected country
 var countrySelection = function(event){
@@ -128,8 +127,7 @@ var searchFormHandler = function(event) {
     if (searchInput) {
         // send city name to OpenTrip handler
         openTripHandler(searchInput);
-    } else {    
-        alert("Please fill in a destination.")        
+      return false;     
     }
 
     // reset form for next search
@@ -157,7 +155,7 @@ var openTripHandler = function(city) {
               getVariables(data);
             });
           } else {
-            alert("Error: No data found.");
+            console.log(error);
           }
         })
         .catch(function(error) {
@@ -191,7 +189,6 @@ var displayOpenTrip = function(cityInfo) {
       var itemName = cityInfo.features[i].properties.name;
       var itemXid = cityInfo.features[i].properties.xid;
       var getInfoUrl = "https://api.opentripmap.com/0.1/en/places/xid/" + itemXid + "?apikey=5ae2e3f221c38a28845f05b62f4bde6c0a2383785f9aafa5d94a8281"
-      // console.log(getInfoUrl);
         fetch(getInfoUrl)
           .then(function(response) {
             response.json().then(function(data) {
