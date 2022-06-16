@@ -120,27 +120,27 @@ var covidDisplay = function(event){
 
 // city search form handler
 var searchFormHandler = function(event) {
+
     event.preventDefault();
     var searchInput = document.querySelector("input[id='searched-location']").value;
-    searchInput = searchInput.trim();
     
-    // checking if there is a valid input
-    if (searchInput) {
-        // send city name to OpenTrip handler
-        openTripHandler(searchInput);
-    } else {    
-        alert("Please fill in a destination.")        
-    }
+    console.log(searchInput);
 
-    // reset form for next search
-    document.querySelector("input[id='searched-location']").value = "";
+
+   // checking if there is a valid input
+    if (!searchInput) {
+        alert("Please fill in a destination.")        
+      return false;
+    }
     
-    // create object to pass to past searches and save function
-    var searchInputObj = {
-        city: searchInput
+  // reset form for next search
+  document.querySelector("input[id='searched-location']").value = "";
+  
+  // create object to pass to past searches and save function
+  var searchInputObj = {
+      city: searchInput
     }  
     
-    // pushing to searchInfo array (is this step necessary?) How do we add country code from dropdown to this object?
     searchInfo.push(searchInputObj);
     // save array to localStorage
     saveInfo(searchInfo);
@@ -234,9 +234,9 @@ var displayOpenTrip = function(cityInfo) {
 
     
 // a card is displayed on the page in the Past Searches area
-    
+
 // save input as an object in localStorage
-var saveInfo = function() {
+let saveInfo = function() {
     localStorage.setItem("searchInfo", JSON.stringify(searchInfo));
 }
 
@@ -271,3 +271,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
