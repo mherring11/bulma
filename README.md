@@ -31,8 +31,8 @@ THEN I am presented with points of interest and weather information for that ciy
 ```
 
 ## Deployed Website
-Deployed URL: https://mherring11.github.io/stay-tripn <br />
-![Deployed website](./assets/Deployed%20Wireframe.png)
+Deployed URL: https://mherring11.github.io/stay-tripn <br/><br/>
+![Deployed website](./assets/screenshot.png)
 
 ## Built With
 * HTML
