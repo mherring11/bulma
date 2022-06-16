@@ -1,7 +1,6 @@
 // Global variables
 var formEl = document.querySelector("#search-form");
 var pastSearch = document.querySelector("#past-search");
-var searchBtn = document.querySelector("#search-btn");
 var countrySelCont = document.querySelector("#countrySelCont");
 var regionSelCont = document.querySelector("#regionSelCont");
 var covidElHolder = document.querySelector("#covidElHolder");
@@ -272,7 +271,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-
-
-// city search event listener
-formEl.addEventListener("submit", searchFormHandler);
