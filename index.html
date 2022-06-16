@@ -101,6 +101,268 @@
               <label for="search">Where to?</label>
                  <!-- Search Input Form -->
               <div id="input-area">
+                <div id="countrySelCont">
+                  <!-- country select list courtesy of - https://www.html-code-generator.com/html/drop-down/country-names -->
+                  <select class="dest-select" id="country" name="country">
+                    <option selected>select country</option>
+                    <option class="country-drop" value="AF">Afghanistan</option>
+                    <option class="country-drop" value="AX">Aland Islands</option>
+                    <option class="country-drop" value="AL">Albania</option>
+                    <option class="country-drop" value="DZ">Algeria</option>
+                    <option class="country-drop" value="AS">American Samoa</option>
+                    <option class="country-drop" value="AD">Andorra</option>
+                    <option class="country-drop" value="AO">Angola</option>
+                    <option class="country-drop" value="AI">Anguilla</option>
+                    <option class="country-drop" value="AQ">Antarctica</option>
+                    <option class="country-drop" value="AG">Antigua and Barbuda</option>
+                    <option class="country-drop" value="AR">Argentina</option>
+                    <option class="country-drop" value="AM">Armenia</option>
+                    <option class="country-drop" value="AW">Aruba</option>
+                    <option class="country-drop" value="AU">Australia</option>
+                    <option class="country-drop" value="AT">Austria</option>
+                    <option class="country-drop" value="AZ">Azerbaijan</option>
+                    <option class="country-drop" value="BS">Bahamas</option>
+                    <option class="country-drop" value="BH">Bahrain</option>
+                    <option class="country-drop" value="BD">Bangladesh</option>
+                    <option class="country-drop" value="BB">Barbados</option>
+                    <option class="country-drop" value="BY">Belarus</option>
+                    <option class="country-drop" value="BE">Belgium</option>
+                    <option class="country-drop" value="BZ">Belize</option>
+                    <option class="country-drop" value="BJ">Benin</option>
+                    <option class="country-drop" value="BM">Bermuda</option>
+                    <option class="country-drop" value="BT">Bhutan</option>
+                    <option class="country-drop" value="BO">Bolivia</option>
+                    <option class="country-drop" value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                    <option class="country-drop" value="BA">Bosnia and Herzegovina</option>
+                    <option class="country-drop" value="BW">Botswana</option>
+                    <option class="country-drop" value="BV">Bouvet Island</option>
+                    <option class="country-drop" value="BR">Brazil</option>
+                    <option class="country-drop" value="IO">British Indian Ocean Territory</option>
+                    <option class="country-drop" value="BN">Brunei Darussalam</option>
+                    <option class="country-drop" value="BG">Bulgaria</option>
+                    <option class="country-drop" value="BF">Burkina Faso</option>
+                    <option class="country-drop" value="BI">Burundi</option>
+                    <option class="country-drop" value="KH">Cambodia</option>
+                    <option class="country-drop" value="CM">Cameroon</option>
+                    <option class="country-drop" value="CA">Canada</option>
+                    <option class="country-drop" value="CV">Cape Verde</option>
+                    <option class="country-drop" value="KY">Cayman Islands</option>
+                    <option class="country-drop" value="CF">Central African Republic</option>
+                    <option class="country-drop" value="TD">Chad</option>
+                    <option class="country-drop" value="CL">Chile</option>
+                    <option class="country-drop" value="CN">China</option>
+                    <option class="country-drop" value="CX">Christmas Island</option>
+                    <option class="country-drop" value="CC">Cocos (Keeling) Islands</option>
+                    <option class="country-drop" value="CO">Colombia</option>
+                    <option class="country-drop" value="KM">Comoros</option>
+                    <option class="country-drop" value="CG">Congo</option>
+                    <option class="country-drop" value="CD">Congo, Democratic Republic of the Congo</option>
+                    <option class="country-drop" value="CK">Cook Islands</option>
+                    <option class="country-drop" value="CR">Costa Rica</option>
+                    <option class="country-drop" value="CI">Cote D'Ivoire</option>
+                    <option class="country-drop" value="HR">Croatia</option>
+                    <option class="country-drop" value="CU">Cuba</option>
+                    <option class="country-drop" value="CW">Curacao</option>
+                    <option class="country-drop" value="CY">Cyprus</option>
+                    <option class="country-drop" value="CZ">Czech Republic</option>
+                    <option class="country-drop" value="DK">Denmark</option>
+                    <option class="country-drop" value="DJ">Djibouti</option>
+                    <option class="country-drop" value="DM">Dominica</option>
+                    <option class="country-drop" value="DO">Dominican Republic</option>
+                    <option class="country-drop" value="EC">Ecuador</option>
+                    <option class="country-drop" value="EG">Egypt</option>
+                    <option class="country-drop" value="SV">El Salvador</option>
+                    <option class="country-drop" value="GQ">Equatorial Guinea</option>
+                    <option class="country-drop" value="ER">Eritrea</option>
+                    <option class="country-drop" value="EE">Estonia</option>
+                    <option class="country-drop" value="ET">Ethiopia</option>
+                    <option class="country-drop" value="FK">Falkland Islands (Malvinas)</option>
+                    <option class="country-drop" value="FO">Faroe Islands</option>
+                    <option class="country-drop" value="FJ">Fiji</option>
+                    <option class="country-drop" value="FI">Finland</option>
+                    <option class="country-drop" value="FR">France</option>
+                    <option class="country-drop" value="GF">French Guiana</option>
+                    <option class="country-drop" value="PF">French Polynesia</option>
+                    <option class="country-drop" value="TF">French Southern Territories</option>
+                    <option class="country-drop" value="GA">Gabon</option>
+                    <option class="country-drop" value="GM">Gambia</option>
+                    <option class="country-drop" value="GE">Georgia</option>
+                    <option class="country-drop" value="DE">Germany</option>
+                    <option class="country-drop" value="GH">Ghana</option>
+                    <option class="country-drop" value="GI">Gibraltar</option>
+                    <option class="country-drop" value="GR">Greece</option>
+                    <option class="country-drop" value="GL">Greenland</option>
+                    <option class="country-drop" value="GD">Grenada</option>
+                    <option class="country-drop" value="GP">Guadeloupe</option>
+                    <option class="country-drop" value="GU">Guam</option>
+                    <option class="country-drop" value="GT">Guatemala</option>
+                    <option class="country-drop" value="GG">Guernsey</option>
+                    <option class="country-drop" value="GN">Guinea</option>
+                    <option class="country-drop" value="GW">Guinea-Bissau</option>
+                    <option class="country-drop" value="GY">Guyana</option>
+                    <option class="country-drop" value="HT">Haiti</option>
+                    <option class="country-drop" value="HM">Heard Island and Mcdonald Islands</option>
+                    <option class="country-drop" value="VA">Holy See (Vatican City State)</option>
+                    <option class="country-drop" value="HN">Honduras</option>
+                    <option class="country-drop" value="HK">Hong Kong</option>
+                    <option class="country-drop" value="HU">Hungary</option>
+                    <option class="country-drop" value="IS">Iceland</option>
+                    <option class="country-drop" value="IN">India</option>
+                    <option class="country-drop" value="ID">Indonesia</option>
+                    <option class="country-drop" value="IR">Iran, Islamic Republic of</option>
+                    <option class="country-drop" value="IQ">Iraq</option>
+                    <option class="country-drop" value="IE">Ireland</option>
+                    <option class="country-drop" value="IM">Isle of Man</option>
+                    <option class="country-drop" value="IL">Israel</option>
+                    <option class="country-drop" value="IT">Italy</option>
+                    <option class="country-drop" value="JM">Jamaica</option>
+                    <option class="country-drop" value="JP">Japan</option>
+                    <option class="country-drop" value="JE">Jersey</option>
+                    <option class="country-drop" value="JO">Jordan</option>
+                    <option class="country-drop" value="KZ">Kazakhstan</option>
+                    <option class="country-drop" value="KE">Kenya</option>
+                    <option class="country-drop" value="KI">Kiribati</option>
+                    <option class="country-drop" value="KP">Korea, Democratic People's Republic of</option>
+                    <option class="country-drop" value="KR">Korea, Republic of</option>
+                    <option class="country-drop" value="XK">Kosovo</option>
+                    <option class="country-drop" value="KW">Kuwait</option>
+                    <option class="country-drop" value="KG">Kyrgyzstan</option>
+                    <option class="country-drop" value="LA">Lao People's Democratic Republic</option>
+                    <option class="country-drop" value="LV">Latvia</option>
+                    <option class="country-drop" value="LB">Lebanon</option>
+                    <option class="country-drop" value="LS">Lesotho</option>
+                    <option class="country-drop" value="LR">Liberia</option>
+                    <option class="country-drop" value="LY">Libyan Arab Jamahiriya</option>
+                    <option class="country-drop" value="LI">Liechtenstein</option>
+                    <option class="country-drop" value="LT">Lithuania</option>
+                    <option class="country-drop" value="LU">Luxembourg</option>
+                    <option class="country-drop" value="MO">Macao</option>
+                    <option class="country-drop" value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                    <option class="country-drop" value="MG">Madagascar</option>
+                    <option class="country-drop" value="MW">Malawi</option>
+                    <option class="country-drop" value="MY">Malaysia</option>
+                    <option class="country-drop" value="MV">Maldives</option>
+                    <option class="country-drop" value="ML">Mali</option>
+                    <option class="country-drop" value="MT">Malta</option>
+                    <option class="country-drop" value="MH">Marshall Islands</option>
+                    <option class="country-drop" value="MQ">Martinique</option>
+                    <option class="country-drop" value="MR">Mauritania</option>
+                    <option class="country-drop" value="MU">Mauritius</option>
+                    <option class="country-drop" value="YT">Mayotte</option>
+                    <option class="country-drop" value="MX">Mexico</option>
+                    <option class="country-drop" value="FM">Micronesia, Federated States of</option>
+                    <option class="country-drop" value="MD">Moldova, Republic of</option>
+                    <option class="country-drop" value="MC">Monaco</option>
+                    <option class="country-drop" value="MN">Mongolia</option>
+                    <option class="country-drop" value="ME">Montenegro</option>
+                    <option class="country-drop" value="MS">Montserrat</option>
+                    <option class="country-drop" value="MA">Morocco</option>
+                    <option class="country-drop" value="MZ">Mozambique</option>
+                    <option class="country-drop" value="MM">Myanmar</option>
+                    <option class="country-drop" value="NA">Namibia</option>
+                    <option class="country-drop" value="NR">Nauru</option>
+                    <option class="country-drop" value="NP">Nepal</option>
+                    <option class="country-drop" value="NL">Netherlands</option>
+                    <option class="country-drop" value="AN">Netherlands Antilles</option>
+                    <option class="country-drop" value="NC">New Caledonia</option>
+                    <option class="country-drop" value="NZ">New Zealand</option>
+                    <option class="country-drop" value="NI">Nicaragua</option>
+                    <option class="country-drop" value="NE">Niger</option>
+                    <option class="country-drop" value="NG">Nigeria</option>
+                    <option class="country-drop" value="NU">Niue</option>
+                    <option class="country-drop" value="NF">Norfolk Island</option>
+                    <option class="country-drop" value="MP">Northern Mariana Islands</option>
+                    <option class="country-drop" value="NO">Norway</option>
+                    <option class="country-drop" value="OM">Oman</option>
+                    <option class="country-drop" value="PK">Pakistan</option>
+                    <option class="country-drop" value="PW">Palau</option>
+                    <option class="country-drop" value="PS">Palestinian Territory, Occupied</option>
+                    <option class="country-drop" value="PA">Panama</option>
+                    <option class="country-drop" value="PG">Papua New Guinea</option>
+                    <option class="country-drop" value="PY">Paraguay</option>
+                    <option class="country-drop" value="PE">Peru</option>
+                    <option class="country-drop" value="PH">Philippines</option>
+                    <option class="country-drop" value="PN">Pitcairn</option>
+                    <option class="country-drop" value="PL">Poland</option>
+                    <option class="country-drop" value="PT">Portugal</option>
+                    <option class="country-drop" value="PR">Puerto Rico</option>
+                    <option class="country-drop" value="QA">Qatar</option>
+                    <option class="country-drop" value="RE">Reunion</option>
+                    <option class="country-drop" value="RO">Romania</option>
+                    <option class="country-drop" value="RU">Russian Federation</option>
+                    <option class="country-drop" value="RW">Rwanda</option>
+                    <option class="country-drop" value="BL">Saint Barthelemy</option>
+                    <option class="country-drop" value="SH">Saint Helena</option>
+                    <option class="country-drop" value="KN">Saint Kitts and Nevis</option>
+                    <option class="country-drop" value="LC">Saint Lucia</option>
+                    <option class="country-drop" value="MF">Saint Martin</option>
+                    <option class="country-drop" value="PM">Saint Pierre and Miquelon</option>
+                    <option class="country-drop" value="VC">Saint Vincent and the Grenadines</option>
+                    <option class="country-drop" value="WS">Samoa</option>
+                    <option class="country-drop" value="SM">San Marino</option>
+                    <option class="country-drop" value="ST">Sao Tome and Principe</option>
+                    <option class="country-drop" value="SA">Saudi Arabia</option>
+                    <option class="country-drop" value="SN">Senegal</option>
+                    <option class="country-drop" value="RS">Serbia</option>
+                    <option class="country-drop" value="CS">Serbia and Montenegro</option>
+                    <option class="country-drop" value="SC">Seychelles</option>
+                    <option class="country-drop" value="SL">Sierra Leone</option>
+                    <option class="country-drop" value="SG">Singapore</option>
+                    <option class="country-drop" value="SX">Sint Maarten</option>
+                    <option class="country-drop" value="SK">Slovakia</option>
+                    <option class="country-drop" value="SI">Slovenia</option>
+                    <option class="country-drop" value="SB">Solomon Islands</option>
+                    <option class="country-drop" value="SO">Somalia</option>
+                    <option class="country-drop" value="ZA">South Africa</option>
+                    <option class="country-drop" value="GS">South Georgia and the South Sandwich Islands</option>
+                    <option class="country-drop" value="SS">South Sudan</option>
+                    <option class="country-drop" value="ES">Spain</option>
+                    <option class="country-drop" value="LK">Sri Lanka</option>
+                    <option class="country-drop" value="SD">Sudan</option>
+                    <option class="country-drop" value="SR">Suriname</option>
+                    <option class="country-drop" value="SJ">Svalbard and Jan Mayen</option>
+                    <option class="country-drop" value="SZ">Swaziland</option>
+                    <option class="country-drop" value="SE">Sweden</option>
+                    <option class="country-drop" value="CH">Switzerland</option>
+                    <option class="country-drop" value="SY">Syrian Arab Republic</option>
+                    <option class="country-drop" value="TW">Taiwan, Province of China</option>
+                    <option class="country-drop" value="TJ">Tajikistan</option>
+                    <option class="country-drop" value="TZ">Tanzania, United Republic of</option>
+                    <option class="country-drop" value="TH">Thailand</option>
+                    <option class="country-drop" value="TL">Timor-Leste</option>
+                    <option class="country-drop" value="TG">Togo</option>
+                    <option class="country-drop" value="TK">Tokelau</option>
+                    <option class="country-drop" value="TO">Tonga</option>
+                    <option class="country-drop" value="TT">Trinidad and Tobago</option>
+                    <option class="country-drop" value="TN">Tunisia</option>
+                    <option class="country-drop" value="TR">Turkey</option>
+                    <option class="country-drop" value="TM">Turkmenistan</option>
+                    <option class="country-drop" value="TC">Turks and Caicos Islands</option>
+                    <option class="country-drop" value="TV">Tuvalu</option>
+                    <option class="country-drop" value="UG">Uganda</option>
+                    <option class="country-drop" value="UA">Ukraine</option>
+                    <option class="country-drop" value="AE">United Arab Emirates</option>
+                    <option class="country-drop" value="GB">United Kingdom</option>
+                    <option class="country-drop" value="US">United States</option>
+                    <option class="country-drop" value="UM">United States Minor Outlying Islands</option>
+                    <option class="country-drop" value="UY">Uruguay</option>
+                    <option class="country-drop" value="UZ">Uzbekistan</option>
+                    <option class="country-drop" value="VU">Vanuatu</option>
+                    <option class="country-drop" value="VE">Venezuela</option>
+                    <option class="country-drop" value="VN">Viet Nam</option>
+                    <option class="country-drop" value="VG">Virgin Islands, British</option>
+                    <option class="country-drop" value="VI">Virgin Islands, U.s.</option>
+                    <option class="country-drop" value="WF">Wallis and Futuna</option>
+                    <option class="country-drop" value="EH">Western Sahara</option>
+                    <option class="country-drop" value="YE">Yemen</option>
+                    <option class="country-drop" value="ZM">Zambia</option>
+                    <option class="country-drop" value="ZW">Zimbabwe</option>
+                  </select>
+                </div>
+                <div id="regionSelCont">
+                  <!-- holds dynamic region select element -->
+                </div>
+                <input id="searched-location" type="text" placeholder="Anytown, USA">
                 <input id="searched-location" type="text" placeholder="City Search">
                 <button id="search-btn" class="button" type="submit">Take Off!</button>
               </div>
@@ -110,27 +372,21 @@
           </div>
         </div>
       </section>
-        
+      
       <section class="section">
         <div class="container">
           <div class="columns is-centered is-vcentered">
             <div class="mb-5 column is-4">
               <div class="mb-5 box" style="opacity: 0.3;">
-                <div class="py-5 px-4 has-text-centered">
-                  <svg class="mb-3 mx-auto image is-32x32 has-text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                  </svg>
-                  <h3 class="title is-size-5 is-spaced mb-3">Start Your Search</h3>
-                  <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
+                
               </div>
               <div class="mb-5 box">
                 <div class="py-5 px-4 has-text-centered">
-                  <svg class="mb-3 mx-auto image is-32x32 has-text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path>
-                  </svg>
-                  <h3 class="title is-size-5 is-spaced mb-3">Select A Package</h3>
-                  <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div id="covidElHolder" class="py-5 px-4 has-text-centered">
+                    <img class="image is-32x32" src="./assets/images/covid-travel-icon.png" alt=""/>
+                      <h3 class="title is-size-5 is-spaced mb-3">Covid Data for Your Search</h3>
+                    <!-- dynamic elements displaying covid data -->
+                  </div>
                 </div>
               </div>
               <div class="box" style="opacity: 0.3;">
