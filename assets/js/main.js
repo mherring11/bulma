@@ -184,9 +184,6 @@ var openTripHandler = function(city) {
 }
 
 var displayOpenTrip = function(cityInfo) {
-  // clear existing data
-  openTripEl.textContent = ""
-
   // cycle through each item in cityInfo to get the names of the places and their XID for the info and img
   for (var i = 0; i < cityInfo.features.length; i++) {
     if (cityInfo.features[i].properties.name != "") {
@@ -207,8 +204,7 @@ var displayOpenTrip = function(cityInfo) {
       
       var displayItemInfo = function(itemData) {
         console.log(itemData, itemData.name, itemData.image);
-        // clear existing content
-      
+        // var openTripEl = document.querySelector("#places-section");
 
         // create divs for Places cards
         var infoCardEl = document.createElement("div")
