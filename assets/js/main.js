@@ -5,6 +5,7 @@ var searchBtn = document.querySelector("#search-btn");
 var countrySelCont = document.querySelector("#countrySelCont");
 var regionSelCont = document.querySelector("#regionSelCont");
 var covidElHolder = document.querySelector("#covidElHolder");
+var openTripEl = document.querySelector("#places-section");
 
 
 var searchInfo = [];
@@ -118,21 +119,7 @@ var covidDisplay = function(event){
     }           
 };
 
-
-    // checking if there is a valid input
-/**************************************/
-/** PSEUDOCODE FOR DROPDOWN FEATURES **/
-/**************************************/
-// When the page loads, there should be a dropdown menu for countries (to query COVID API)
-// (starting with just US and CA for now)
-// When the user picks a country code, they're given another drop down to pick region (state/province for COVID second query)
-// the regional COVID stats print to the page
-// city search form is displayed for further drill-down on OpenTripMap and Accuweather APIs
-// results for OpenTrip displayed
-// Accuweather data is displayed
-
-
-// city seearch form handler
+// city search form handler
 var searchFormHandler = function(event) {
     event.preventDefault();
     var searchInput = document.querySelector("input[id='searched-location']").value;
@@ -175,35 +162,75 @@ var openTripHandler = function(city) {
           }
         })
         .catch(function(error) {
-          alert("Unable to connect to OpenTripMap for location data.");
+          console.log(error);
         });
 
+    // getting the lon and lat for the second fetch
     var getVariables = function(location) {
       var lon = location.lon
       var lat = location.lat
-      console.log(lon, lat);
-      var newApiUrl = "https://api.opentripmap.com/0.1/en/places/radius?radius=2000&lon=" + lon + "&lat=" + lat + "&kinds=historic,natural,cultural,amusements&limit=40&apikey=5ae2e3f221c38a28845f05b62f4bde6c0a2383785f9aafa5d94a8281";
+      // setting limit to 10 items being returned by this fetch
+      var newApiUrl = "https://api.opentripmap.com/0.1/en/places/radius?radius=2000&lon=" + lon + "&lat=" + lat + "&kinds=historic,natural,cultural,amusements&limit=10&apikey=5ae2e3f221c38a28845f05b62f4bde6c0a2383785f9aafa5d94a8281";
 
       fetch(newApiUrl)
         .then(function(response) {
-          if (response.ok) {
             response.json().then(function(data) {
-              displayOpenTrip(data);
-            });
-          } else {
-            alert("Error: Something went wrong.");
-          }
+            displayOpenTrip(data);
         })
         .catch(function(error) {
-          alert("Unable to connect to OpenTripMap for location data.")
+          console.log(error);
         });
-    }
+      });
+    } 
 }
 
 var displayOpenTrip = function(cityInfo) {
-  
-   console.log(cityInfo);
-  
+  // cycle through each item in cityInfo to get the names of the places and their XID for the info and img
+  for (var i = 0; i < cityInfo.features.length; i++) {
+    if (cityInfo.features[i].properties.name != "") {
+      // creating more variables for yet a third fetch
+      var itemName = cityInfo.features[i].properties.name;
+      var itemXid = cityInfo.features[i].properties.xid;
+      var getInfoUrl = "https://api.opentripmap.com/0.1/en/places/xid/" + itemXid + "?apikey=5ae2e3f221c38a28845f05b62f4bde6c0a2383785f9aafa5d94a8281"
+      // console.log(getInfoUrl);
+        fetch(getInfoUrl)
+          .then(function(response) {
+            response.json().then(function(data) {
+              displayItemInfo(data);
+            })
+          .catch(function(error) {
+            console.log(error);
+          });
+        });
+      
+      var displayItemInfo = function(itemData) {
+        console.log(itemData, itemData.name, itemData.image);
+        // var openTripEl = document.querySelector("#places-section");
+
+        // create divs for Places cards
+        var infoCardEl = document.createElement("div")
+        infoCardEl.classList = "card place-cards";
+        openTripEl.appendChild(infoCardEl);
+
+        // display place name on card
+        var cardNameEl = document.createElement("h4");
+        cardNameEl.classList = "title is-size-6 is-spaced mb-3";
+        cardNameEl.textContent = itemData.name;
+        infoCardEl.appendChild(cardNameEl);
+
+        // display place image on card
+        var placeImgEl = document.createElement("figure");
+        placeImgEl.classList = "image";
+        placeImgEl.innerHTML = "<img src='itemData.image' alt=''></img>";
+        infoCardEl.appendChild(placeImgEl);
+
+      }
+
+    }
+  }
+
+ 
+
 }
 
     
@@ -245,3 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
+// city search event listener
+formEl.addEventListener("submit", searchFormHandler);
