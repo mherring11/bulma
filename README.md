@@ -46,6 +46,7 @@ Deployed URL: https://mherring11.github.io/stay-tripn <br/><br/>
 ## Future Development
 * We would like to add a way to get a targeted weather forecast for a date range when the user is planning on traveling to the location.
 * We would like to make this a one-stop-shop for all travel infomation (ie. bus schedules, train & plane ticket info, tour info, attraction tickets, hotels, etc.).
+* Need to grab pictures for "Places to See" from the OpenTripMap API and get them to display. Currenly, we have the information, but it's not displaying currently, and this particular part of the pull was causing the API to break for "too many pulls."
 
 ## Authors
 **Michael Herring**
